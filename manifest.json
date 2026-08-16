@@ -1,0 +1,15 @@
+{
+  "name": "BURAKO",
+  "short_name": "BURAKO",
+  "start_url": "burako.html",
+  "display": "standalone",
+  "background_color": "#f5f5f5",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "burako-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
