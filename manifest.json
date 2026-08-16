@@ -1,7 +1,7 @@
 {
   "name": "BURAKO",
   "short_name": "BURAKO",
-  "start_url": "burako.html",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#f5f5f5",
   "theme_color": "#ffffff",
