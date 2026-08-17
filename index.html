@@ -431,7 +431,7 @@ th:nth-child(3) {
 
 <div class="sale">
 
-    Sale:
+    Empieza:
 
     <strong id="sale"></strong>
 
@@ -466,7 +466,8 @@ Nosotros
 
 <input id="baseN"
        type="number"
-       inputmode="numeric">
+       inputmode="numeric"
+       step="100">
 
 </div>
 
@@ -486,7 +487,8 @@ Nosotros
 
 <input id="ptsN"
        type="number"
-       inputmode="numeric">
+       inputmode="numeric"
+       step="5">
 
 </div>
 
@@ -534,7 +536,8 @@ Ellos
 
 <input id="baseE"
        type="number"
-       inputmode="numeric">
+       inputmode="numeric"
+       step="100">
 
 </div>
 
@@ -554,7 +557,8 @@ Ellos
 
 <input id="ptsE"
        type="number"
-       inputmode="numeric">
+       inputmode="numeric"
+       step="5">
 
 </div>
 
@@ -594,14 +598,14 @@ Total
 
 <button onclick="deshacer()">
 
-↶ Deshacer
+↶ Borrar última mano
 
 </button>
 
 
 <button onclick="abrirNuevaPartida()">
 
-↻ Nueva partida
+↻ Partido Nuevo
 
 </button>
 
@@ -626,7 +630,7 @@ Total
 
 <th>Ellos</th>
 
-<th>Sale</th>
+<th>Empieza</th>
 
 </tr>
 
@@ -833,6 +837,28 @@ function agregarMano() {
         numero("ptsE");
 
 
+    if (baseN % 100 !== 0 ||
+        baseE % 100 !== 0) {
+
+        alert(
+            "La Base debe ser múltiplo de 100."
+        );
+
+        return;
+    }
+
+
+    if (ptsN % 5 !== 0 ||
+        ptsE % 5 !== 0) {
+
+        alert(
+            "Los puntos deben ser múltiplos de 5."
+        );
+
+        return;
+    }
+
+
     const puntosN =
         baseN + ptsN;
 
@@ -970,6 +996,12 @@ function deshacer() {
 
 
     if (manos.length === 0) {
+
+        return;
+    }
+
+
+    if (!confirm("¿Borrar la última mano?")) {
 
         return;
     }
