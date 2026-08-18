@@ -418,6 +418,14 @@ th:nth-child(3) {
     color: white;
 }
 
+
+.modal-button.cancel {
+
+    background: #dddddd;
+
+    color: #222222;
+}
+
 </style>
 
 </head>
@@ -709,7 +717,15 @@ Elegí quién juega 1°, 2°, 3° y 4°
 <button class="modal-button"
         onclick="confirmarNuevaPartida()">
 
-Empezar partida
+Empezar Partido Nuevo
+
+</button>
+
+
+<button class="modal-button cancel"
+        onclick="cancelarNuevaPartida()">
+
+Cancelar
 
 </button>
 
@@ -1096,6 +1112,17 @@ function abrirNuevaPartida() {
     document.getElementById(
         "modalOrden"
     ).style.display = "block";
+
+}
+
+
+
+function cancelarNuevaPartida() {
+
+
+    document.getElementById(
+        "modalOrden"
+    ).style.display = "none";
 
 }
 
