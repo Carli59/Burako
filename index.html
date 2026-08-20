@@ -158,6 +158,12 @@ label {
 }
 
 
+.input-row.base-row {
+
+    grid-template-columns: 1fr;
+}
+
+
 input {
 
     width: 100%;
@@ -462,20 +468,14 @@ Nosotros
 <label>Base</label>
 
 
-<div class="input-row">
-
-<button class="sign-btn"
-        onclick="cambiarSigno('baseN')">
-
-+/−
-
-</button>
-
+<div class="input-row base-row">
 
 <input id="baseN"
        type="number"
        inputmode="numeric"
-       step="100">
+       min="0"
+       step="100"
+       oninput="if (this.value < 0) this.value = '';">
 
 </div>
 
@@ -532,20 +532,14 @@ Ellos
 <label>Base</label>
 
 
-<div class="input-row">
-
-<button class="sign-btn"
-        onclick="cambiarSigno('baseE')">
-
-+/−
-
-</button>
-
+<div class="input-row base-row">
 
 <input id="baseE"
        type="number"
        inputmode="numeric"
-       step="100">
+       min="0"
+       step="100"
+       oninput="if (this.value < 0) this.value = '';">
 
 </div>
 
@@ -851,6 +845,17 @@ function agregarMano() {
 
     const ptsE =
         numero("ptsE");
+
+
+    if (baseN < 0 ||
+        baseE < 0) {
+
+        alert(
+            "La Base no puede ser negativa."
+        );
+
+        return;
+    }
 
 
     if (baseN % 100 !== 0 ||
