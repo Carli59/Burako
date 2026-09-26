@@ -1,28 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 
 <meta charset="UTF-8">
 
 <meta name="viewport"
-      content="width=device-width,
-               initial-scale=1.0">
+      content="width=device-width, initial-scale=1.0">
 
-<meta name="theme-color"
-      content="#ffffff">
+<meta name="theme-color" content="#ffffff">
 
 <title>BURAKO</title>
 
-<link rel="manifest"
-      href="manifest.json">
-
-<link rel="icon"
-      href="burako-icon.png">
-
-<link rel="apple-touch-icon"
-      href="burako-icon.png">
-
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="burako-icon.png">
+<link rel="apple-touch-icon" href="burako-icon.png">
 
 <style>
 
@@ -31,1279 +22,708 @@
 }
 
 body {
-
     font-family: Arial, sans-serif;
-
     margin: 0;
-
     padding: 12px;
-
     background: #f5f5f5;
-
     text-align: center;
 }
 
-
 h1 {
-
     font-size: 34px;
-
     margin: 5px 0 12px;
-
     color: #07152f;
 }
 
-
 .sale {
-
     background: #eef5ff;
-
     border: 1px solid #a9c9ff;
-
     border-radius: 14px;
-
     padding: 10px;
-
     margin-bottom: 12px;
-
     font-size: 22px;
 }
 
-
 .sale strong {
-
     font-size: 25px;
-
     color: #1769d2;
 }
 
-
 .scoreboard {
-
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     gap: 10px;
 }
 
-
 .team {
-
     border-radius: 15px;
-
     padding: 12px 8px;
 }
 
-
 .team-nosotros {
-
     background: #f0faf2;
-
     border: 1px solid #b7dfc0;
 }
 
-
 .team-ellos {
-
     background: #fff7f0;
-
     border: 1px solid #ffd0aa;
 }
 
-
 .team-title {
-
     font-size: 27px;
-
     font-weight: bold;
-
     margin-bottom: 8px;
 }
 
-
 .nosotros {
-
     color: #188038;
 }
 
-
 .ellos {
-
     color: #e85d04;
 }
 
-
 label {
-
     display: block;
-
     font-size: 20px;
-
     margin-top: 8px;
 }
 
-
 .input-row {
-
     display: grid;
-
     grid-template-columns: 48px 1fr;
-
     gap: 6px;
-
     align-items: center;
-
     margin-top: 4px;
 }
 
-
-.input-row.base-row {
-
-    grid-template-columns: 1fr;
-}
-
-
 input {
-
     width: 100%;
-
     height: 60px;
-
     font-size: 29px;
-
     font-weight: bold;
-
     text-align: center;
-
     background: white;
-
     border-radius: 10px;
 }
 
-
 .team-nosotros input {
-
     border: 2px solid #188038;
-
     color: #188038;
 }
 
-
 .team-ellos input {
-
     border: 2px solid #ff7a21;
-
     color: #e85d04;
 }
 
-
 .sign-btn {
-
     height: 60px;
-
     border: none;
-
     border-radius: 10px;
-
     font-size: 20px;
-
     font-weight: bold;
-
     background: #dddddd;
-
     padding: 0;
 }
 
-
 .total {
-
     margin-top: 14px;
-
     padding-top: 10px;
-
     font-size: 21px;
 }
 
-
 .team-nosotros .total {
-
     border-top: 2px solid #188038;
 }
 
-
 .team-ellos .total {
-
     border-top: 2px solid #ff7a21;
 }
 
-
 .total-number {
-
     font-size: 39px;
-
     font-weight: bold;
 }
 
-
-.add {
-
-    width: 100%;
-
-    background: #1a73e8;
-
-    color: white;
-
-    border: none;
-
-    border-radius: 12px;
-
-    font-size: 24px;
-
-    padding: 14px;
-
-    margin-top: 14px;
-}
-
-
-.buttons {
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 10px;
-
-    margin-top: 10px;
-}
-
-
-.buttons button {
-
-    border: none;
-
-    border-radius: 12px;
-
-    padding: 13px 6px;
-
-    font-size: 19px;
-
-    background: #dddddd;
-}
-
+/* HISTORIA INMEDIATAMENTE DEBAJO DE LOS TOTALES */
 
 .history {
-
-    margin-top: 14px;
-
+    margin-top: 12px;
     background: white;
-
     border-radius: 14px;
-
     padding: 8px;
 }
 
-
 table {
-
     width: 100%;
-
     border-collapse: collapse;
-
     font-size: 17px;
 }
 
-
-th,
-td {
-
+th, td {
     padding: 8px 3px;
-
     border-bottom: 1px solid #ddd;
 }
 
-
 th:nth-child(2) {
-
     color: #188038;
 }
 
-
 th:nth-child(3) {
-
     color: #e85d04;
 }
 
+/* LOS TRES BOTONES QUEDAN ABAJO DE TODO */
+
+.bottom-buttons {
+    margin-top: 12px;
+}
+
+.add {
+    width: 100%;
+    background: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 24px;
+    padding: 14px;
+}
+
+.secondary-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.secondary-buttons button {
+    border: none;
+    border-radius: 12px;
+    padding: 13px 5px;
+    font-size: 18px;
+    background: #dddddd;
+}
 
 .modal {
-
     display: none;
-
     position: fixed;
-
     z-index: 10;
-
     left: 0;
-
     top: 0;
-
     width: 100%;
-
     height: 100%;
-
     background: rgba(0,0,0,0.45);
-
     padding: 20px;
 }
 
-
 .modal-content {
-
     background: white;
-
     max-width: 420px;
-
     margin: 40px auto;
-
     padding: 20px;
-
     border-radius: 18px;
 }
 
-
 .modal-content h2 {
-
     margin-top: 0;
 }
 
-
 .modal-content p {
-
     font-size: 18px;
 }
 
-
 .order-row {
-
     margin: 10px 0;
-
     font-size: 19px;
 }
 
-
 .order-row select {
-
     width: 75%;
-
     height: 48px;
-
     font-size: 20px;
-
     padding: 4px;
-
     border-radius: 8px;
 }
 
-
 .modal-button {
-
     width: 100%;
-
     margin-top: 15px;
-
     padding: 13px;
-
     font-size: 21px;
-
     border: none;
-
     border-radius: 10px;
-
     background: #1a73e8;
-
     color: white;
 }
 
-
-.modal-button.cancel {
-
-    background: #dddddd;
-
-    color: #222222;
-}
-
 </style>
-
 </head>
-
 
 <body>
 
-
 <h1>BURAKO</h1>
 
-
 <div class="sale">
-
     Empieza:
-
     <strong id="sale"></strong>
-
 </div>
-
 
 <div class="scoreboard">
 
+    <div class="team team-nosotros">
 
-<div class="team team-nosotros">
+        <div class="team-title nosotros">
+            Nosotros
+        </div>
 
+        <label>Base</label>
 
-<div class="team-title nosotros">
+        <div class="input-row">
+            <button class="sign-btn"
+                    onclick="cambiarSigno('baseN')">+/−</button>
 
-Nosotros
+            <input id="baseN"
+                   type="number"
+                   inputmode="numeric">
+        </div>
 
-</div>
+        <label>Pts.</label>
 
+        <div class="input-row">
+            <button class="sign-btn"
+                    onclick="cambiarSigno('ptsN')">+/−</button>
 
-<label>Base</label>
+            <input id="ptsN"
+                   type="number"
+                   inputmode="numeric">
+        </div>
 
+        <div class="total">
+            Total
+            <div class="total-number nosotros"
+                 id="totalN">0</div>
+        </div>
 
-<div class="input-row base-row">
-
-<input id="baseN"
-       type="number"
-       inputmode="numeric"
-       min="0"
-       step="100"
-       oninput="if (this.value < 0) this.value = '';">
-
-</div>
-
-
-<label>Pts.</label>
-
-
-<div class="input-row">
-
-<button class="sign-btn"
-        onclick="cambiarSigno('ptsN')">
-
-+/−
-
-</button>
+    </div>
 
 
-<input id="ptsN"
-       type="number"
-       inputmode="numeric"
-       step="5">
+    <div class="team team-ellos">
 
-</div>
+        <div class="team-title ellos">
+            Ellos
+        </div>
 
+        <label>Base</label>
 
-<div class="total">
+        <div class="input-row">
+            <button class="sign-btn"
+                    onclick="cambiarSigno('baseE')">+/−</button>
 
-Total
+            <input id="baseE"
+                   type="number"
+                   inputmode="numeric">
+        </div>
 
-<div class="total-number nosotros"
-     id="totalN">
+        <label>Pts.</label>
 
-0
+        <div class="input-row">
+            <button class="sign-btn"
+                    onclick="cambiarSigno('ptsE')">+/−</button>
 
-</div>
+            <input id="ptsE"
+                   type="number"
+                   inputmode="numeric">
+        </div>
 
-</div>
+        <div class="total">
+            Total
+            <div class="total-number ellos"
+                 id="totalE">0</div>
+        </div>
 
-
-</div>
-
-
-
-<div class="team team-ellos">
-
-
-<div class="team-title ellos">
-
-Ellos
-
-</div>
-
-
-<label>Base</label>
-
-
-<div class="input-row base-row">
-
-<input id="baseE"
-       type="number"
-       inputmode="numeric"
-       min="0"
-       step="100"
-       oninput="if (this.value < 0) this.value = '';">
+    </div>
 
 </div>
 
 
-<label>Pts.</label>
-
-
-<div class="input-row">
-
-<button class="sign-btn"
-        onclick="cambiarSigno('ptsE')">
-
-+/−
-
-</button>
-
-
-<input id="ptsE"
-       type="number"
-       inputmode="numeric"
-       step="5">
-
-</div>
-
-
-<div class="total">
-
-Total
-
-<div class="total-number ellos"
-     id="totalE">
-
-0
-
-</div>
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-
-<button class="add"
-        onclick="agregarMano()">
-
-+ Agregar mano
-
-</button>
-
-
-
-<div class="buttons">
-
-
-<button onclick="deshacer()">
-
-↶ Borrar última mano
-
-</button>
-
-
-<button onclick="abrirNuevaPartida()">
-
-↻ Partido Nuevo
-
-</button>
-
-
-</div>
-
-
+<!-- HISTORIA -->
 
 <div class="history">
 
-
 <table>
 
-
 <thead>
-
 <tr>
-
-<th>Mano</th>
-
-<th>Nosotros</th>
-
-<th>Ellos</th>
-
-<th>Empieza</th>
-
+    <th>Mano</th>
+    <th>Nosotros</th>
+    <th>Ellos</th>
+    <th>Empezó</th>
 </tr>
-
 </thead>
 
-
-<tbody id="historial">
-
-</tbody>
-
+<tbody id="historial"></tbody>
 
 </table>
 
+</div>
+
+
+<!-- BOTONES ABAJO DE TODO -->
+
+<div class="bottom-buttons">
+
+    <button class="add"
+            onclick="agregarMano()">
+        + Agregar mano
+    </button>
+
+    <div class="secondary-buttons">
+
+        <button onclick="deshacer()">
+            ↶ Borrar última mano
+        </button>
+
+        <button onclick="abrirNuevaPartida()">
+            ↻ Partido nuevo
+        </button>
+
+    </div>
 
 </div>
 
 
-
-<div id="modalOrden"
-     class="modal">
-
+<div id="modalOrden" class="modal">
 
 <div class="modal-content">
 
+<h2>Orden de jugadores</h2>
 
-<h2>
-
-Orden de jugadores
-
-</h2>
-
-
-<p>
-
-Elegí quién juega 1°, 2°, 3° y 4°
-
-</p>
-
+<p>Elegí quién juega 1°, 2°, 3° y 4°</p>
 
 <div class="order-row">
-
-1°
-
-<select id="jug1"></select>
-
+    1° <select id="jug1"></select>
 </div>
-
 
 <div class="order-row">
-
-2°
-
-<select id="jug2"></select>
-
+    2° <select id="jug2"></select>
 </div>
-
 
 <div class="order-row">
-
-3°
-
-<select id="jug3"></select>
-
+    3° <select id="jug3"></select>
 </div>
-
 
 <div class="order-row">
-
-4°
-
-<select id="jug4"></select>
-
+    4° <select id="jug4"></select>
 </div>
-
 
 <button class="modal-button"
         onclick="confirmarNuevaPartida()">
-
-Empezar Partido Nuevo
-
+    Empezar Partido Nuevo
 </button>
 
-
-<button class="modal-button cancel"
-        onclick="cancelarNuevaPartida()">
-
-Cancelar
-
-</button>
-
-
 </div>
-
 </div>
-
 
 
 <script>
 
-
 const jugadoresDisponibles = [
-
     "Carli",
-
     "Silvia W",
-
     "Silvia F",
-
     "Gaby"
-
 ];
-
 
 let jugadores = [
-
     "Carli",
-
     "Silvia W",
-
     "Silvia F",
-
     "Gaby"
-
 ];
 
-
 let totalN = 0;
-
 let totalE = 0;
-
 let turno = 0;
-
 let manos = [];
-
 
 
 function cambiarSigno(id) {
 
-
-    const campo =
-        document.getElementById(id);
-
+    const campo = document.getElementById(id);
 
     if (campo.value === "") {
-
-
         campo.value = "-";
-
-
         campo.focus();
-
-
         return;
     }
 
+    let valor = Number(campo.value);
 
-    let valor =
-        Number(campo.value);
+    if (isNaN(valor)) return;
 
-
-    if (isNaN(valor)) {
-
-        return;
-    }
-
-
-    campo.value =
-        valor * -1;
-
-
+    campo.value = valor * -1;
     campo.focus();
 }
 
 
-
 function numero(id) {
-
 
     const valor =
         document.getElementById(id).value;
 
-
-    if (valor === "" ||
-        valor === "-") {
-
-
+    if (valor === "" || valor === "-") {
         return 0;
     }
-
 
     return Number(valor);
 }
 
 
-
 function agregarMano() {
 
+    const baseN = numero("baseN");
+    const ptsN  = numero("ptsN");
 
-    const baseN =
-        numero("baseN");
+    const baseE = numero("baseE");
+    const ptsE  = numero("ptsE");
 
+    const puntosN = baseN + ptsN;
+    const puntosE = baseE + ptsE;
 
-    const ptsN =
-        numero("ptsN");
-
-
-    const baseE =
-        numero("baseE");
-
-
-    const ptsE =
-        numero("ptsE");
-
-
-    if (baseN < 0 ||
-        baseE < 0) {
-
-        alert(
-            "La Base no puede ser negativa."
-        );
-
-        return;
-    }
-
-
-    if (baseN % 100 !== 0 ||
-        baseE % 100 !== 0) {
-
-        alert(
-            "La Base debe ser múltiplo de 100."
-        );
-
-        return;
-    }
-
-
-    if (ptsN % 5 !== 0 ||
-        ptsE % 5 !== 0) {
-
-        alert(
-            "Los puntos deben ser múltiplos de 5."
-        );
-
-        return;
-    }
-
-
-    const puntosN =
-        baseN + ptsN;
-
-
-    const puntosE =
-        baseE + ptsE;
-
-
-
-    if (puntosN === 0 &&
-        puntosE === 0) {
-
+    if (puntosN === 0 && puntosE === 0) {
 
         alert(
             "Ingresá los puntos antes de agregar la mano."
         );
 
-
         return;
     }
 
-
-
     manos.push({
-
         puntosN: puntosN,
-
         puntosE: puntosE,
-
         sale: jugadores[turno]
-
     });
 
-
-
     totalN += puntosN;
-
     totalE += puntosE;
-
-
 
     turno++;
 
-
-
     if (turno >= jugadores.length) {
-
         turno = 0;
     }
 
-
-
     limpiar();
-
     mostrar();
-
     guardar();
-
 }
-
 
 
 function limpiar() {
 
-
     document.getElementById("baseN").value = "";
-
     document.getElementById("ptsN").value = "";
-
     document.getElementById("baseE").value = "";
-
     document.getElementById("ptsE").value = "";
-
 }
-
 
 
 function mostrar() {
 
-
     document.getElementById("totalN").textContent =
         totalN;
-
 
     document.getElementById("totalE").textContent =
         totalE;
 
-
     document.getElementById("sale").textContent =
         jugadores[turno];
-
 
     const tabla =
         document.getElementById("historial");
 
-
     tabla.innerHTML = "";
 
-
     manos.forEach(function(mano, index) {
-
 
         const fila =
             document.createElement("tr");
 
-
         fila.innerHTML =
-
-            "<td>" +
-            (index + 1) +
-            "</td>" +
-
+            "<td>" + (index + 1) + "</td>" +
             "<td style='color:#188038'>" +
-            mano.puntosN +
-            "</td>" +
-
+            mano.puntosN + "</td>" +
             "<td style='color:#e85d04'>" +
-            mano.puntosE +
-            "</td>" +
-
-            "<td>" +
-            mano.sale +
-            "</td>";
-
+            mano.puntosE + "</td>" +
+            "<td>" + mano.sale + "</td>";
 
         tabla.appendChild(fila);
-
     });
-
 }
-
 
 
 function deshacer() {
 
-
     if (manos.length === 0) {
-
         return;
     }
 
-
-    if (!confirm("¿Borrar la última mano?")) {
-
-        return;
-    }
-
-
-    const ultima =
-        manos.pop();
-
+    const ultima = manos.pop();
 
     totalN -= ultima.puntosN;
-
     totalE -= ultima.puntosE;
-
 
     turno--;
 
-
     if (turno < 0) {
-
-        turno =
-            jugadores.length - 1;
+        turno = jugadores.length - 1;
     }
 
-
     mostrar();
-
     guardar();
-
 }
-
 
 
 function llenarSelects() {
 
-
     const selects = [
-
         document.getElementById("jug1"),
-
         document.getElementById("jug2"),
-
         document.getElementById("jug3"),
-
         document.getElementById("jug4")
-
     ];
 
-
-    selects.forEach(
-        function(select, index) {
-
+    selects.forEach(function(select, index) {
 
         select.innerHTML = "";
-
 
         jugadoresDisponibles.forEach(
             function(nombre) {
 
+                const option =
+                    document.createElement("option");
 
-            const option =
-                document.createElement("option");
+                option.value = nombre;
+                option.textContent = nombre;
 
+                select.appendChild(option);
+            }
+        );
 
-            option.value =
-                nombre;
-
-
-            option.textContent =
-                nombre;
-
-
-            select.appendChild(option);
-
-        });
-
-
-        select.value =
-            jugadores[index];
-
+        select.value = jugadores[index];
     });
-
 }
-
 
 
 function abrirNuevaPartida() {
 
-
     llenarSelects();
-
 
     document.getElementById(
         "modalOrden"
     ).style.display = "block";
-
 }
-
-
-
-function cancelarNuevaPartida() {
-
-
-    document.getElementById(
-        "modalOrden"
-    ).style.display = "none";
-
-}
-
 
 
 function confirmarNuevaPartida() {
 
-
     const nuevoOrden = [
-
-
         document.getElementById("jug1").value,
-
         document.getElementById("jug2").value,
-
         document.getElementById("jug3").value,
-
         document.getElementById("jug4").value
-
     ];
 
-
-    const unicos =
-        new Set(nuevoOrden);
-
-
+    const unicos = new Set(nuevoOrden);
 
     if (unicos.size !== 4) {
-
 
         alert(
             "Cada jugador debe aparecer una sola vez."
         );
 
-
         return;
     }
 
-
-
-    jugadores =
-        nuevoOrden;
-
+    jugadores = nuevoOrden;
 
     totalN = 0;
-
     totalE = 0;
-
     turno = 0;
-
     manos = [];
-
 
     document.getElementById(
         "modalOrden"
     ).style.display = "none";
 
-
     limpiar();
-
     mostrar();
-
     guardar();
-
 }
-
 
 
 function guardar() {
 
-
     localStorage.setItem(
-
-
         "burako",
 
-
         JSON.stringify({
-
-
             totalN: totalN,
-
             totalE: totalE,
-
             turno: turno,
-
             manos: manos,
-
             jugadores: jugadores
-
-
         })
-
-
     );
-
 }
-
 
 
 function cargar() {
 
-
     const datos =
         localStorage.getItem("burako");
 
-
     if (datos) {
-
 
         const partida =
             JSON.parse(datos);
 
-
-        totalN =
-            partida.totalN || 0;
-
-
-        totalE =
-            partida.totalE || 0;
-
-
-        turno =
-            partida.turno || 0;
-
-
-        manos =
-            partida.manos || [];
-
+        totalN = partida.totalN || 0;
+        totalE = partida.totalE || 0;
+        turno = partida.turno || 0;
+        manos = partida.manos || [];
 
         if (partida.jugadores) {
-
-
-            jugadores =
-                partida.jugadores;
-
+            jugadores = partida.jugadores;
         }
-
     }
 
-
     mostrar();
-
 }
-
 
 
 cargar();
 
 
-
-/* Registrar la app */
-
 if ("serviceWorker" in navigator) {
-
 
     window.addEventListener(
         "load",
 
         function() {
 
-
             navigator.serviceWorker.register(
                 "service-worker.js"
             );
 
         }
-
     );
-
 }
-
 
 </script>
 
-
 </body>
-
 </html>
